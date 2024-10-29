@@ -22,7 +22,7 @@ export function displayScene() {
 export function makeAChoice(index) {
   const choice = story[currentScene].choices[index];
 
-  if (choice.effect === "warriorStuff" && choice.item) {
+  if (choice.effect === "warriorStarterStuff" && choice.item) {
     choice.item.forEach((item) => player.inventory.push(item)); // Ajoute chaque élément du tableau d'items individuellement (il y en a 3)
     displayInventory();
   }

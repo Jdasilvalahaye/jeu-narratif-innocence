@@ -21,25 +21,72 @@ export const story = {
       {
         text: "Prendre l'épée, le bouclier et l'armure en plate lourde",
         nextScene: "warrior",
-        effect: "warriorStuff",
+        effect: "warriorStarterStuff",
         item: [
-          { name: "Épée de novice", type: "arme", strBonus: 3, imageUrl: "/public/images/stuff/epee-novice.webp" },
+          {
+            name: "Épée de novice",
+            type: "arme",
+            strBonus: 3,
+            imageUrl: "/public/images/stuff/warrior-start-sword.webp",
+          },
           {
             name: "Armure de plate",
             type: "armure lourde",
             pdefBonus: 5,
-            imageUrl: "/public/images/stuff/armure-plate.webp",
+            imageUrl: "/public/images/stuff/warrior-start-armor.webp",
           },
           {
             name: "Bouclier en bois",
             type: "bouclier",
             pdefBonus: 2,
-            imageUrl: "/public/images/stuff/bouclier-bois.webp",
+            imageUrl: "/public/images/stuff/warrior-start-shield.webp",
           },
         ],
       },
-      { text: "Prendre l'arc, les fleches, et la tenue légère", nextScene: "rogue" },
-      { text: "Prendre le baton et la robe", nextScene: "sorcerer" },
+      {
+        text: "Prendre l'arc, la tenue légère et le couteau",
+        nextScene: "rogue",
+        effect: "rogueStarterStuff",
+        item: [
+          {
+            name: "Arc d'initié",
+            type: "arme",
+            dexBonus: 3,
+            imageUrl: "/public/images/stuff/rogue-start-bow.webp",
+          },
+          {
+            name: "Tunique en cuir",
+            type: "armure moyenne",
+            pdefBonus: 2,
+            imageUrl: "/public/images/stuff/rogue-start-leather-chest.webp",
+          },
+          {
+            name: "Couteau de chasse",
+            type: "arme",
+            dexBonus: 1,
+            imageUrl: "/public/images/stuff/rogue-start-knife.webp",
+          },
+        ],
+      },
+      {
+        text: "Prendre le baton et la robe",
+        nextScene: "sorcerer",
+        effect: "sorcererStarterStuff",
+        item: [
+          {
+            name: "Bâton d'adepte",
+            type: "arme",
+            intBonus: 4,
+            imageUrl: "/public/images/stuff/sorcerer-start-stick.webp",
+          },
+          {
+            name: "Cape d'adepte",
+            type: "armure légère",
+            mdefBonus: 4,
+            imageUrl: "/public/images/stuff/sorcerer-start-cape.webp.webp",
+          },
+        ],
+      },
     ],
   },
 
