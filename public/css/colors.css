@@ -1,0 +1,9 @@
+:root {
+    --theme-color : rgb(40, 38, 38);
+    --subtheme-color : rgb(45, 50, 50);
+    --first-color : rgb(145, 173, 225);
+    --second-color : rgb(208, 193, 166);
+    --basic-texte-color : rgb(245, 245, 245);
+    --choice-color: rgb(111, 37, 12);
+    --btn-background : rgb(205, 197, 193);
+}

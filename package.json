@@ -1,0 +1,11 @@
+{
+  "name": "projet-innocent",
+  "version": "1.0.0",
+  "description": "Premier petit jeu narratif. Projet réalisé en autodidacte a des fins d'apprentissages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonathan Dasilva Lahaye",
+  "license": "ISC"
+}

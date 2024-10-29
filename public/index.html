@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu Narratif - Innocence</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bienvenue dans votre aventure</h1>
+    </header>
+    
+    <section id="statistics">
+        <h2>Statistiques du joueur</h2>
+        <div id="stats-container">
+            <div id="health-mana">
+                <p>PV : <span id="hp">100</span></p>
+                <p>Mana : <span id="mana">60</span></p>
+            </div>
+            <div id="atk-stats">
+                <p>Force : <span id="str">10</span></p>
+                <p>Intelligence : <span id="int">10</span></p>
+            </div>
+            <div id ="def-stats">
+                <p>Défense physique : <span id="defp">0</span></p>
+                <p>Défense magique : <span id="defm">0</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="narration">
+        <p id="texte">C'est ici que le texte de l'histoire apparaîtra</p>
+    </section>
+    
+    <section id="choice">
+        <button class="choice-btn" onclick="faireUnChoix(1)">Choix 1</button>
+        <button class="choice-btn" onclick="faireUnChoix(2)">Choix 2</button>
+    </section>
+
+    <script type="module" src="/js/index.js"></script>
+</body>
+</html>

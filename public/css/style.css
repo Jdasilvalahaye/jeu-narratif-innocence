@@ -1,0 +1,90 @@
+@import url('./colors.css');
+
+/* Style de base pour la page */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--theme-color);
+    color: var(--basic-texte-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* En-tête */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: var(--first-color)
+}
+
+/* Section des statistiques */
+#statistics {
+    width: 80%;
+    max-width: 600px;
+    background-color: var(--subtheme-color);
+    padding:10px ;
+    border-radius: 8px;
+    color: var(--basic-texte-color);
+    margin-bottom: 20px;
+}
+
+#statistics h2 {
+    font-size: 1.5em;
+    color: var(--second-color);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#stats-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--basic-texte-color)
+}
+
+/* Section de narration */
+#narration {
+    background-color: var(--subtheme-color);
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#texte{
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* Boutons de choix */
+#choice {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.choice-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: var(--choice-color);
+    background-color: var(--btn-background);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.choice-btn:hover{
+    background-color: var(--second-color);
+}
