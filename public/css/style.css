@@ -50,6 +50,40 @@ header h1 {
     color: var(--basic-texte-color)
 }
 
+/* Section de l'inventaire */
+#inventorySection {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--subtheme-color);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    color: var(--basic-texte-color);
+}
+
+#inventory {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colonnes */
+    grid-template-rows: repeat(2, 1fr);    /* 2 lignes */
+    gap: 10px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#inventory li {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    color: #eee;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Section de narration */
 #narration {
     background-color: var(--subtheme-color);

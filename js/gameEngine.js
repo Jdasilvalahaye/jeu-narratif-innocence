@@ -1,3 +1,4 @@
+import { displayInventory, player } from "./player.js";
 import { story } from "./story.js";
 
 let currentScene = "start";
@@ -21,6 +22,10 @@ export function displayScene() {
 export function makeAChoice(index) {
   const choice = story[currentScene].choices[index];
 
+  if (choice.effect === "warriorStuff" && choice.item) {
+    choice.item.forEach((item) => player.inventory.push(item)); // Ajoute chaque élément du tableau d'items individuellement (il y en a 3)
+    displayInventory();
+  }
   currentScene = choice.nextScene;
   displayScene();
 }
