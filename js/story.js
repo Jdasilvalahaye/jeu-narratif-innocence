@@ -62,7 +62,7 @@ export const story = {
             imageUrl: "/public/pictures/stuff/rogue-start-leather-chest.webp",
           },
           {
-            name: "Couteau de chasse",
+            name: "Couteau d'initié",
             type: "arme",
             dexBonus: 1,
             imageUrl: "/public/pictures/stuff/rogue-start-knife.webp",
@@ -84,7 +84,7 @@ export const story = {
             name: "Cape d'adepte",
             type: "armure légère",
             mdefBonus: 4,
-            imageUrl: "/public/pictures/stuff/sorcerer-start-cape.webp.webp",
+            imageUrl: "/public/pictures/stuff/sorcerer-start-cape.webp",
           },
         ],
       },
@@ -94,5 +94,15 @@ export const story = {
   // Choix du guerrier
   warrior: {
     text: "Vous vous équipez de l'armure de plate, de l'épée d'acier et du bouclier en bois. Vous sortez de votre cabane et avancez sur un sentier enneigé. Après quelques minutes de marche, le chemin se divise en deux. Sur votre droite, nous ne voyez rien à plus de 2 mètres, la densité des arbres et le blizard naissant vous en empêchant. A votre gauche, le chemin semble moins austère et vous appercevez une montagne à quelques heures de marche. Quel chemin prenez-vous ?",
+    choices: [
+      {
+        text: "Prendre la route de droite",
+        nextScene: "rencontre loup",
+      },
+      {
+        text: "Prendre la route de gauche",
+        nextScene: "rencontre paysan",
+      },
+    ],
   },
 };

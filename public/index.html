@@ -12,42 +12,58 @@
         <h1>Bienvenue dans votre aventure</h1>
     </header>
     
-    <section id="statistics">
-        <h2>Statistiques du joueur</h2>
-        <!-- Les statistiques sont initiées et gérées dans l'objet player puis modifiées par les choix du joueur -->
-        <div id="stats-container">
-            <div id="health-mana">
-                <p>PV : <span id="hp"></span></p>
-                <p>Energie : <span id="stam"></span></p>
-                <p>Mana : <span id="mana"></span></p>
+    <!-- La boite main est la boite qui contiendra les autres sections qu'on orginisera avec un display grid-->
+    <main>
+        <!-- Colonne de gauche : Statistiques et inventaire -->
+        <section id="statistics">
+            <h2>Statistiques du joueur</h2>
+            <!-- Les statistiques sont initiées et gérées dans l'objet player puis modifiées par les choix du joueur -->
+            <div id="stats-container">
+                <div id="health-mana">
+                    <p>PV : <span id="hp"></span></p>
+                    <p>Energie : <span id="stam"></span></p>
+                    <p>Mana : <span id="mana"></span></p>
+                </div>
+                <div id="atk-stats">
+                    <p>Force : <span id="str"></span></p>
+                    <p>Dextérité : <span id="dex"></span></p>
+                    <p>Intelligence : <span id="int"></span></p>
+                </div>
+                <div id ="def-stats">
+                    <p>Défense physique : <span id="pdef"></span></p>
+                    <p>Défense magique : <span id="mdef"></span></p>
+                    <p>Blocage : <span id="block"></span></p>
+                </div>
             </div>
-            <div id="atk-stats">
-                <p>Force : <span id="str"></span></p>
-                <p>Dextérité : <span id="dex"></span></p>
-                <p>Intelligence : <span id="int"></span></p>
-            </div>
-            <div id ="def-stats">
-                <p>Défense physique : <span id="pdef"></span></p>
-                <p>Défense magique : <span id="mdef"></span></p>
-                <p>Blocage : <span id="block"></span></p>
-            </div>
-        </div>
-    </section>
-
-    <section id="inventorySection">
-        <h2>Inventaire</h2>
-        <ul id="inventory"></ul>
-    </section>
-
-    <section id="narration">
-        <p id="text">C'est ici que le texte de l'histoire apparaîtra</p>
-    </section>
+        </section>
     
-    <section id="choice">
-        <button class="choice-btn" onclick="makeAChoice(1)">Choix 1</button>
-        <button class="choice-btn" onclick="makeAChoice(2)">Choix 2</button>
-        <button class="choice-btn" onclick="makeAChoice(3)">Choix 3</button>
-    </section>
+        <section id="inventorySection">
+            <h2>Inventaire</h2>
+            <ul id="inventory"></ul>
+        </section>
+
+        <!-- Colonne de droite : Narration et Choix -->
+        <section id="narration">
+            <h2>Histoire</h2>
+            <p id="text">C'est ici que le texte de l'histoire apparaîtra</p>
+        </section>
+        
+        <section id="choice">
+            <button class="choice-btn" onclick="makeAChoice(1)">Choix 1</button>
+            <button class="choice-btn" onclick="makeAChoice(2)">Choix 2</button>
+            <button class="choice-btn" onclick="makeAChoice(3)">Choix 3</button>
+        </section>
+
+        <section id="avatars">
+            <div id="player-avatar">
+                <h2>Joueur</h2>
+            </div>
+            <div id="npc-avatar">
+                <h2>Personnages non joueur</h2>
+            </div>
+        </section>
+    </main>
+
 
     <script type="module" src="/js/index.js"></script>
 </body>
