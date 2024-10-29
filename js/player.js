@@ -1,24 +1,30 @@
 export const player = {
   hp: 100,
+  stamina: 80,
   mana: 60,
   strenght: 10,
+  dexterity: 10,
   intelligence: 10,
   physicalDefense: 0,
+  block: 0,
   magicalDefense: 0,
   inventory: [],
 };
 
-// Fonction pour mettre à jour les statistiques
+// --- Fonction pour mettre à jour les statistiques
 export function displayStats() {
   document.getElementById("hp").textContent = player.hp;
+  document.getElementById("stam").textContent = player.stamina;
   document.getElementById("mana").textContent = player.mana;
   document.getElementById("str").textContent = player.strenght;
+  document.getElementById("dex").textContent = player.dexterity;
   document.getElementById("int").textContent = player.intelligence;
   document.getElementById("pdef").textContent = player.physicalDefense;
+  document.getElementById("block").textContent = player.block;
   document.getElementById("mdef").textContent = player.magicalDefense;
 }
 
-// Fonction pour afficher l'inventaire
+// --- Fonction pour afficher et remplir l'inventaire
 export function displayInventory() {
   const inventoryElement = document.getElementById("inventory");
   inventoryElement.innerHTML = ""; // Vider l'inventaire actuel
@@ -30,8 +36,8 @@ export function displayInventory() {
     const image = document.createElement("img");
     image.src = item.imageUrl;
     image.alt = "item.name";
-    image.style.width = "40px";
-    image.style.height = "40px";
+    image.style.width = "60px";
+    image.style.height = "60px";
     image.style.borderRadius = "5px";
 
     // Créer l'élément de texte pour le nom de l'objet
