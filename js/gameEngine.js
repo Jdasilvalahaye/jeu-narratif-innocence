@@ -1,8 +1,12 @@
 import { displayInventory, displayStats, player } from "./player.js";
-import { displayPlayerAvatar } from "./avatar.js";
+import { displayPlayerAvatar, displayNpcAvatar, displayNpcName } from "./avatar.js";
 import { story } from "/js/story/story.js";
+import { openBattleInstructions, closeBattleInstructionModal } from "./modal.js";
 
 let currentScene = "start";
+// Rend la fonction closeBattleInstructionModal accessible dans le contexte global : sinon la fonction ne s'exécute pas dans le html
+// Ca permet d'utiliser onlclick="closeBattleInstructionModal()" dans le html car la fonction est attachée à l'objet window
+window.closeBattleInstructionModal = closeBattleInstructionModal;
 
 // --- Fonction qui affiche la scène : met à jour l'html avec le texte de la scène en cours, vide les anciens boutons, parcours les choix de currentScene pour créer un btn par choix, appelle la fonction makeAChoice quand on clique sur un bouton
 export function displayScene() {
@@ -47,6 +51,10 @@ export function makeAChoice(index) {
     player.magicalDefense += 4;
     displayStats();
     displayPlayerAvatar("/public/pictures/player/sorcerer-avatar.webp");
+  } else if (choice.effect === "warriorFirstBattleWolf") {
+    displayNpcAvatar("/public/pictures/npc/wolf.webp");
+    displayNpcName("Loup sauvage");
+    openBattleInstructions();
   }
 
   currentScene = choice.nextScene;

@@ -4,12 +4,33 @@ export const warriorScene = {
     choices: [
       {
         text: "Prendre le sentier de gauche",
-        nextScene: "rencontre loup",
+        nextScene: "warriorWolfEncounter1",
+        effect: "warriorFirstBattleWolf",
       },
       {
         text: "Prendre le sentier de droite",
-        nextScene: "rencontre paysan",
+        nextScene: "warriorFarmerEncounter1",
       },
     ],
+  },
+
+  // Scène du loup 1
+  warriorWolfEncounter1: {
+    text: "Vous entrez dans une forêt dense où le blizzard réduit la visibilité à quelques mètres à peine. Les arbres craquent sous le vent glacial, et le silence pesant est rapidement brisé par un grondement sourd. Soudain, une ombre massive bondit hors des fourrés : un loup sauvage, immense et aux crocs acérés, se dresse sur le chemin, les yeux luisant de férocité.",
+    choices: [
+      {
+        text: "Affronter le loup",
+        nextScene: "warriorBattleWolf1",
+      },
+      {
+        text: "Fuir et se cacher",
+        nextScene: "warriorFleeWolf1",
+      },
+    ],
+  },
+
+  // Affronter le loup
+  warriorBattleWolf1: {
+    text: "Vous déguainez votre épée, maintenez votre bouclier près du torse, et vous vous préparez à votre premier affrontement",
   },
 };

@@ -59,11 +59,28 @@
                 <img id ="player-avatar" src="./pictures/player/starter-avatar.webp" alt="starter-avatar">
             </div>
             <div id="npc-avatar-container">
-                <h2>Personnages non joueur</h2>
+                <h2 id="npc-name"></h2>
                 <img id ="npc-avatar" src="" alt="">
             </div>
         </section>
     </main>
+
+    <!-- Pop-up d'instructions de combat -->
+<div id="battle-instructions" class="modal">
+    <div class="modal-content">
+      <h2>Système de Combat</h2>
+      <p>
+        Pour attaquer, vous devrez lancer un dé virtuel. Le résultat du dé déterminera l'issue du combat.
+        Voici comment cela fonctionne :
+        <ul>
+          <li>1-3 : Échec - Vous ratez votre attaque</li>
+          <li>4-5 : Succès partiel - Vous infligez des dégâts modérés</li>
+          <li>6 : Succès critique - Vous infligez des dégâts importants</li>
+        </ul>
+      </p>
+      <button onclick="closeBattleInstructionModal()">J'ai compris</button>
+    </div>
+  </div>
 
 
     <script type="module" src="/js/index.js"></script>
