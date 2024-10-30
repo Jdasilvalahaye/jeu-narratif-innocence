@@ -1,6 +1,6 @@
 import { displayInventory, displayStats, player } from "./player.js";
 import { displayPlayerAvatar } from "./avatar.js";
-import { story } from "./story.js";
+import { story } from "/js/story/story.js";
 
 let currentScene = "start";
 
