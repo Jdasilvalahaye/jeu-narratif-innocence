@@ -47,8 +47,8 @@ export const story = {
         ],
       },
       {
-        text: "Prendre l'équipement du rodeur'",
-        nextScene: "rogue",
+        text: "Prendre l'équipement du rodeur",
+        nextScene: "rogueChoice",
         effect: "rogueStarterStuff",
         item: [
           {
@@ -72,8 +72,8 @@ export const story = {
         ],
       },
       {
-        text: "Prendre l'équipement du mage'",
-        nextScene: "sorcerer",
+        text: "Prendre l'équipement du mage",
+        nextScene: "sorcererChoice",
         effect: "sorcererStarterStuff",
         item: [
           {

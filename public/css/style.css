@@ -125,7 +125,7 @@ main{
     margin-top: 10px;
 }
 
-.choice-btn {
+.choice-btn { /* Cette classe n'est pas dans le html mais générée via la fonction displayScene()*/
     padding: 10px 20px;
     font-size: 1em;
     color: var(--choice-color);
