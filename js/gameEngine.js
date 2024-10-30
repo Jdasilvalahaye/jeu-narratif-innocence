@@ -1,4 +1,5 @@
 import { displayInventory, displayStats, player } from "./player.js";
+import { displayPlayerAvatar } from "./avatar.js";
 import { story } from "./story.js";
 
 let currentScene = "start";
@@ -31,18 +32,21 @@ export function makeAChoice(index) {
     player.physicalDefense += 7;
     player.block += 2;
     displayStats();
+    displayPlayerAvatar("/public/pictures/player/warrior-avatar.webp");
   } else if (choice.effect === "rogueStarterStuff" && choice.item) {
     choice.item.forEach((item) => player.inventory.push(item));
     displayInventory();
     player.dexterity += 4;
     player.physicalDefense += 2;
     displayStats();
+    displayPlayerAvatar("/public/pictures/player/rogue-avatar.webp");
   } else if (choice.effect === "sorcererStarterStuff" && choice.item) {
     choice.item.forEach((item) => player.inventory.push(item));
     displayInventory();
     player.intelligence += 4;
     player.magicalDefense += 4;
     displayStats();
+    displayPlayerAvatar("/public/pictures/player/sorcerer-avatar.webp");
   }
 
   currentScene = choice.nextScene;

@@ -42,7 +42,7 @@
             <ul id="inventory"></ul>
         </section>
 
-        <!-- Colonne de droite : Narration et Choix -->
+        <!-- Colonne centrale : Narration et Choix -->
         <section id="narration">
             <h2>Histoire</h2>
             <p id="text">C'est ici que le texte de l'histoire apparaîtra</p>
@@ -54,12 +54,15 @@
             <button class="choice-btn" onclick="makeAChoice(3)">Choix 3</button>
         </section>
 
+        <!-- Colonne de droite : Avatars -->
         <section id="avatars">
-            <div id="player-avatar">
+            <div id="player-avatar-container">
                 <h2>Joueur</h2>
+                <img id ="player-avatar" src="./pictures/player/starter-avatar.webp" alt="starter-avatar">
             </div>
-            <div id="npc-avatar">
+            <div id="npc-avatar-container">
                 <h2>Personnages non joueur</h2>
+                <img id ="npc-avatar" src="" alt="">
             </div>
         </section>
     </main>
