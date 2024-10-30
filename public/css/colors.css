@@ -8,5 +8,7 @@
     --btn-background : rgb(205, 197, 193);
     --img-background : rgb(106, 121, 128);
     --li-inventory-bg: rgb(68, 68, 68);
-    --battle-h2 : rgb(170,20,45)
+    --battle-h2 : rgb(170,20,45);
+    --enemy-damage :  rgb(210, 34, 63);
+    --player-damage :  rgb(11, 174, 109);
 }

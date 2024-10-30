@@ -1,7 +1,9 @@
 export const wolf = {
-  hp: 10,
+  hp: 25,
   stamina: 30,
-  strenght: 6,
+  strength: 30,
   physicalDefense: 3,
   magicalDefense: 0,
+  name: "Loup sauvage",
+  type: "physical", // détermine le type d'attaque
 };

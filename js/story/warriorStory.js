@@ -32,5 +32,26 @@ export const warriorScene = {
   // Affronter le loup
   warriorBattleWolf1: {
     text: "Vous déguainez votre épée, maintenez votre bouclier près du torse, et vous vous préparez à votre premier affrontement",
+    choices: [
+      {
+        text: "Lancer le dé",
+        effect: "battle",
+      },
+    ],
+  },
+
+  // Victoire contre le loup
+  warriorVictoryAgainstWolf1: {
+    text: "Après une intense bataille, vous vous tenez victorieux au-dessus du cadavre du loup. Vous reprenez vos esprits et continuez votre chemin...",
+    choices: [{ text: "Poursuivre votre chemin", nextScene: "nextsceneneedtobedefined" }],
+  },
+
+  // A définir, c'est juste pour avoir qq chose à afficher
+  nextsceneneedtobedefined: {
+    text: "Vous vous aventurez plus loin dans la forêt, avec un sentiment de triomphe",
+    choices: [
+      { text: "Pause pipi", nextScene: "attak" },
+      { text: "Pause repas", nextScene: "digestion" },
+    ],
   },
 };

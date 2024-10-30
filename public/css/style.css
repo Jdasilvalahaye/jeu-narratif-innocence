@@ -125,7 +125,7 @@ main{
     margin-top: 10px;
 }
 
-.choice-btn { /* Cette classe n'est pas dans le html mais générée via la fonction displayScene()*/
+.choice-btn, .dice-btn { /* ces classes ne sont pas dans le html mais générée via la fonction displayScene() et displaybattleinterface()*/
     padding: 10px 20px;
     font-size: 1em;
     color: var(--choice-color);
@@ -137,7 +137,7 @@ main{
     max-height: 200px;
 }
 
-.choice-btn:hover{
+.choice-btn:hover, .dice-btn{
     background-color: var(--second-color);
 }
 
@@ -186,10 +186,10 @@ main{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
-  }
+}
   
-  /* Contenu du modal */
-  .modal-content {
+/* Contenu du modal */
+.modal-content {
     background-color: var(--subtheme-color);
     margin: 15% auto;
     padding: 20px;
@@ -198,21 +198,21 @@ main{
     max-width: 500px;
     text-align: center;
     color: var(--basic-texte-color);
-  }
+}
 
-  .modal-content h2 {
+.modal-content h2 {
     font-size: 1.5em;
     color: var(--battle-h2);
     text-align: center;
     margin-bottom: 10px;
-  }
+}
 
 .modal-content ul {
     list-style-type: none; /* Retire les puces */
     padding-left: 0; /* Supprime le retrait par défaut */
-  }
+}
   
-  .modal-content li {
+.modal-content li {
     margin-bottom: 10px; /* Espace entre les éléments */
     text-align: center;
-  }
+}
