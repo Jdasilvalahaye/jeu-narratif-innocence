@@ -206,3 +206,13 @@ main{
     text-align: center;
     margin-bottom: 10px;
   }
+
+.modal-content ul {
+    list-style-type: none; /* Retire les puces */
+    padding-left: 0; /* Supprime le retrait par défaut */
+  }
+  
+  .modal-content li {
+    margin-bottom: 10px; /* Espace entre les éléments */
+    text-align: center;
+  }

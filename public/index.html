@@ -70,12 +70,14 @@
     <div class="modal-content">
       <h2>Système de Combat</h2>
       <p>
-        Pour attaquer, vous devrez lancer un dé virtuel. Le résultat du dé déterminera l'issue du combat.
+        Vous venez de prendre une décision qui peut vous amener à combattre. Pour attaquer, vous devrez lancer un dé virtuel. Le résultat du dé déterminera l'issue du combat.
         Voici comment cela fonctionne :
         <ul>
-          <li>1-3 : Échec - Vous ratez votre attaque</li>
-          <li>4-5 : Succès partiel - Vous infligez des dégâts modérés</li>
-          <li>6 : Succès critique - Vous infligez des dégâts importants</li>
+          <li>1 : Échec total - Vous ratez votre attaque et l'adversaire riposte</li>
+          <li>2-3 : Échec - Vous ratez votre attaque</li>
+          <li>4-6 : Succès partiel - Vous infligez des dégâts égaux à <span style="color: orange">50% </span>votre force (guerrier), dextérieté (rodeur) ou intelligence (mage)</li>
+          <li>7-11 : Succès total - Vous infligez des dégâts égaux à <span style="color: yellow">100%</span> de votre force (guerrier), dextérieté (rodeur) ou intelligence (mage)</li>
+          <li>12 : Succès critique - Vous infligez des dégâts égaux à <span style="color: green">150%</span> de votre force (guerrier), dextérieté (rodeur) ou intelligence (mage)</li>
         </ul>
       </p>
       <button onclick="closeBattleInstructionModal()">J'ai compris</button>
