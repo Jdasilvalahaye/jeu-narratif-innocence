@@ -151,7 +151,7 @@ export function endBattle(playerDefeated = false) {
   inBattle = false;
 
   if (playerDefeated) {
-    setCurrentScene("start"); // Retourne à la scène de départ en cas de défaite
+    setCurrentScene("gameOver"); // Retourne à la scène de départ en cas de défaite
   } else {
     setCurrentScene(currentEnemy.nextScene); // Passe à la scène suivante en cas de victoire
   }

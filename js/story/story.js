@@ -16,6 +16,17 @@ export const story = {
     choices: [{ text: "Retour au début", nextScene: "start" }],
   },
 
+  // Scène game over
+  gameOver: {
+    text: " Game over... Vos forces vous abandonnent, et un voile sombre s’abat sur votre esprit, vous plongeant dans un abîme sans fin. Les échos de votre quête inachevée résonnent faiblement alors que la lumière s’éteint peu à peu. Tout ce pour quoi vous vous êtes battu semble s’effacer, laissant le monde aux mains des ténèbres. Mais au plus profond de cet oubli, une étincelle demeure… un choix, une chance de réécrire votre destin.",
+    choices: [
+      {
+        text: "Recommencer l'aventure",
+        nextScene: "start",
+      },
+    ],
+  },
+
   // Scène de création du personnage
   characterChoice: {
     text: "Dans votre refuge, vos vieux équipements reposent, rappelant les jours de gloire. Vous savez qu'il vous faudra faire un choix : chaque arme, chaque armure porte en elle un destin différent. Face à vous, un coffre renferme votre imposante armure de guerrier, forgée pour les batailles brutales en corps-à-corps. À l'arrière de la pièce, votre arc et votre carquois reposent sur le mur, accompagnés d’un vêtement de cuir discret, idéal pour les frappes furtives. Enfin, dans un coin sombre, votre bâton gravé de runes et une cape enchantée semblent murmurer les secrets des arts magiques. Quel équipement choisirez-vous ?",
