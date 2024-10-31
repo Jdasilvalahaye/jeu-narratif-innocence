@@ -1,6 +1,6 @@
 import { displayInventory, displayStats, player } from "./player.js";
 import { displayPlayerAvatar, displayNpcAvatar, displayNpcName, hideNpcAvatar } from "./avatar.js";
-import { story } from "/js/story/story.js";
+import { story } from "./story.js";
 import { openBattleInstructions, closeBattleInstructionModal } from "./modal.js";
 import { initiateBattle } from "./battle.js";
 import { wolf, demon, commoners } from "./npc.js";
@@ -53,8 +53,10 @@ export function makeAChoice(index) {
   if (choice.effect === "warriorStarterStuff" && choice.item) {
     choice.item.forEach((item) => player.inventory.push(item)); // Ajoute chaque élément du tableau d'items individuellement (il y en a 3). La condition && choice.item s'assure de la présence des objets et limite les erreurs
     displayInventory();
+    player.hp += 30;
     player.strenght += 3;
     player.physicalDefense += 7;
+    player.magicalDefense += 1;
     player.block += 2;
     player.class = "Guerrier";
     displayStats();
@@ -62,39 +64,43 @@ export function makeAChoice(index) {
   } else if (choice.effect === "rogueStarterStuff" && choice.item) {
     choice.item.forEach((item) => player.inventory.push(item));
     displayInventory();
-    player.dexterity += 4;
+    player.hp += 20;
+    player.dexterity += 5;
     player.physicalDefense += 2;
+    player.magicalDefense += 2;
     player.class = "Rodeur";
     displayStats();
     displayPlayerAvatar("/public/pictures/player/rogue-avatar.webp");
   } else if (choice.effect === "sorcererStarterStuff" && choice.item) {
     choice.item.forEach((item) => player.inventory.push(item));
     displayInventory();
-    player.intelligence += 4;
-    player.magicalDefense += 4;
+    player.hp += 10;
+    player.intelligence += 7;
+    player.magicalDefense += 10;
+    player.physicalDefense += 1;
     player.class = "Mage";
     displayStats();
     displayPlayerAvatar("/public/pictures/player/sorcerer-avatar.webp");
   } else if (choice.effect === "endBattle") {
     hideNpcAvatar();
     displayNpcName("");
-  } else if (choice.effect === "warriorBattleWolf") {
+  } else if (choice.effect === "battleWolf") {
     displayNpcAvatar("/public/pictures/npc/wolf.webp");
     displayNpcName("Loup sauvage");
     openBattleInstructions();
-    initiateBattle(wolf, "warriorVictoryWolf"); // se bat contre un loup et si vitoire, passe à la scène warriorVictoryWolf
+    initiateBattle(wolf, "victoryWolf"); // se bat contre un loup et si vitoire, passe à la scène victoryWolf
     return; // Empêche le passage immédiat à une autre scène
-  } else if (choice.effect === "warriorBattleDemon") {
+  } else if (choice.effect === "battleDemon") {
     displayNpcAvatar("/public/pictures/npc/demon.webp");
     displayNpcName("Démon de la taverne");
-    initiateBattle(demon, "warriorVictoryDemon");
+    initiateBattle(demon, "victoryDemon");
     return;
-  } else if (choice.effect === "warriorBattleCommoners") {
+  } else if (choice.effect === "battleCommoners") {
     displayNpcAvatar("/public/pictures/npc/commoners.webp");
     displayNpcName("Roturiers crapuleux");
-    initiateBattle(commoners, "warriorVictoryCommoners");
+    initiateBattle(commoners, "victoryCommoners");
     return;
-  } else if (choice.effect === "warriorTrapDamage") {
+  } else if (choice.effect === "trapDamage") {
     player.hp -= 30;
     displayStats();
   } else if (choice.effect === "newGame") {

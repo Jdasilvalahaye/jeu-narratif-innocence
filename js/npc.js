@@ -1,6 +1,5 @@
 export const wolf = {
   hp: 25,
-  stamina: 30,
   strength: 12,
   physicalDefense: 3,
   magicalDefense: 0,
@@ -10,7 +9,6 @@ export const wolf = {
 
 export const demon = {
   hp: 40,
-  stamina: 50,
   intelligence: 15,
   physicalDefense: 2,
   magicalDefense: 4,
@@ -20,7 +18,6 @@ export const demon = {
 
 export const commoners = {
   hp: 50,
-  stamina: 40,
   strength: 10,
   physicalDefense: 3,
   magicalDefense: 3,

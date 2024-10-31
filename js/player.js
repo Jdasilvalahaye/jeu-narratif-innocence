@@ -1,8 +1,7 @@
 export const player = {
   class: "Fugitif", // Sert pendant les combats à déterminer le type d'attaque
-  hp: 100,
-  stamina: 80,
-  mana: 60,
+  hp: 50,
+  mana: 20,
   strenght: 10,
   dexterity: 10,
   intelligence: 10,
@@ -16,7 +15,6 @@ export const player = {
 export function displayStats() {
   document.getElementById("class").textContent = player.class;
   document.getElementById("hp").textContent = player.hp;
-  document.getElementById("stam").textContent = player.stamina;
   document.getElementById("mana").textContent = player.mana;
   document.getElementById("str").textContent = player.strenght;
   document.getElementById("dex").textContent = player.dexterity;
