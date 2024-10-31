@@ -108,10 +108,10 @@ function calculatePlayerDamage(roll, enemy) {
 
   switch (true) {
     case roll === 1:
-      message = "Échec total - Vous ratez votre attaque, et l'adversaire riposte !";
+      message = "Échec total - Vous ratez votre attaque et tombez au sol !";
       return { damage: 0, message };
     case roll >= 2 && roll <= 3:
-      message = "Échec - Vous ratez votre attaque.";
+      message = "Échec - Vous ratez votre attaque, votre adversaire l'a esquivée";
       return { damage: 0, message };
     case roll >= 4 && roll <= 6:
       damageMultiplier = 0.5;

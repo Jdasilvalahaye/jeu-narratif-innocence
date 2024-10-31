@@ -190,8 +190,11 @@ main{
   
 /* Contenu du modal */
 .modal-content {
+    position: absolute; /* Position absolue par rapport à la modale */
+    top: 50px; /* À 50px du bord supérieur de l'écran */
+    left: 50%; /* Centre horizontalement */
+    transform: translateX(-50%); /* Centre horizontalement en décalant de 50% vers la gauche */
     background-color: var(--subtheme-color);
-    margin: 15% auto;
     padding: 20px;
     border-radius: 8px;
     width: 80%;

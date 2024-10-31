@@ -31,10 +31,10 @@ export const warriorScene = {
 
   // Affronter le loup
   warriorBattleWolf1: {
-    text: "Vous déguainez votre épée, maintenez votre bouclier près du torse, et vous vous préparez à votre premier affrontement",
+    text: "Vous dégainez lentement votre épée, le métal glacé vibrant dans votre main tandis que vous levez votre bouclier contre les ombres qui tourbillonnent autour de vous. Le loup apparaît à travers le blizzard, ses yeux luisant d’un éclat sauvage, ses crocs dévoilés dans un grognement menaçant qui se mêle au sifflement du vent. Votre cœur bat à tout rompre, et chaque muscle de votre corps se tend tandis que vous vous préparez pour votre premier affrontement. La neige crisse sous vos pieds ; chaque souffle de loup se condense en vapeur, comme une menace palpable. Il n'y a pas de fuite possible – le combat est inévitable.",
     choices: [
       {
-        text: "Lancer le dé",
+        text: "Prêt au combat",
         effect: "battle",
       },
     ],
