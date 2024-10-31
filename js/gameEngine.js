@@ -1,9 +1,9 @@
 import { displayInventory, displayStats, player } from "./player.js";
-import { displayPlayerAvatar, displayNpcAvatar, displayNpcName } from "./avatar.js";
+import { displayPlayerAvatar, displayNpcAvatar, displayNpcName, hideNpcAvatar } from "./avatar.js";
 import { story } from "/js/story/story.js";
 import { openBattleInstructions, closeBattleInstructionModal } from "./modal.js";
 import { initiateBattle } from "./battle.js";
-import { wolf } from "./npc.js";
+import { wolf, demon, commoners } from "./npc.js";
 
 export let currentScene = "start"; // Initialise la scène de départ
 
@@ -75,13 +75,44 @@ export function makeAChoice(index) {
     player.class = "Mage";
     displayStats();
     displayPlayerAvatar("/public/pictures/player/sorcerer-avatar.webp");
-  } else if (choice.effect === "warriorFirstBattleWolf") {
+  } else if (choice.effect === "endBattle") {
+    hideNpcAvatar();
+    displayNpcName("");
+  } else if (choice.effect === "warriorBattleWolf") {
     displayNpcAvatar("/public/pictures/npc/wolf.webp");
     displayNpcName("Loup sauvage");
     openBattleInstructions();
-  } else if (choice.effect === "battle") {
-    initiateBattle(wolf, "warriorVictoryAgainstWolf1"); // se bat contre un loup et si vitoire, passe à la scène warriorVictoryAgainstWolf1
+    initiateBattle(wolf, "warriorVictoryWolf"); // se bat contre un loup et si vitoire, passe à la scène warriorVictoryWolf
     return; // Empêche le passage immédiat à une autre scène
+  } else if (choice.effect === "warriorBattleDemon") {
+    displayNpcAvatar("/public/pictures/npc/demon.webp");
+    displayNpcName("Démon de la taverne");
+    initiateBattle(demon, "warriorVictoryDemon");
+    return;
+  } else if (choice.effect === "warriorBattleCommoners") {
+    displayNpcAvatar("/public/pictures/npc/commoners.webp");
+    displayNpcName("Roturiers crapuleux");
+    initiateBattle(commoners, "warriorVictoryCommoners");
+    return;
+  } else if (choice.effect === "warriorTrapDamage") {
+    player.hp -= 30;
+    displayStats();
+  } else if (choice.effect === "newGame") {
+    player.class = "Fugitif"; // Sert pendant les combats à déterminer le type d'attaque
+    player.hp = 100;
+    player.stamina = 80;
+    player.mana = 60;
+    player.strenght = 10;
+    player.dexterity = 10;
+    player.intelligence = 10;
+    player.physicalDefense = 0;
+    player.block = 0;
+    player.magicalDefense = 0;
+    player.inventory = [];
+    displayStats();
+    displayPlayerAvatar("/public/pictures/player/starter-avatar.webp");
+    hideNpcAvatar();
+    displayNpcName("");
   }
 
   setCurrentScene(choice.nextScene);

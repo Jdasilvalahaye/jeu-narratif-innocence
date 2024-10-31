@@ -23,6 +23,7 @@ export const story = {
       {
         text: "Recommencer l'aventure",
         nextScene: "start",
+        effect: "newGame",
       },
     ],
   },
@@ -103,5 +104,6 @@ export const story = {
       },
     ],
   },
+
   ...warriorScene,
 };
