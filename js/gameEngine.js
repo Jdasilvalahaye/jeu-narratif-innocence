@@ -7,12 +7,12 @@ import { wolf, demon, commoners } from "./npc.js";
 
 export let currentScene = "start"; // Initialise la scène de départ
 
-// --- Fonction pour mettre à jour la scène actuelle
+// -------------- Fonction pour mettre à jour la scène actuelle
 export function setCurrentScene(scene) {
   currentScene = scene;
 }
 
-// -- Fonction pour obtenir la scène actuelle
+// -------------- Fonction pour obtenir la scène actuelle
 export function getCurrentScene() {
   return story[currentScene];
 }
@@ -21,13 +21,13 @@ export function getCurrentScene() {
 // Ca permet d'utiliser onlclick="closeBattleInstructionModal()" dans le html car la fonction est attachée à l'objet window
 window.closeBattleInstructionModal = closeBattleInstructionModal;
 
-// --- Fonction qui sert à ajouter du texte supplémentaire et contextuel aux scènes (comme le déroulé d'un combat)
+// -------------- Fonction qui sert à ajouter du texte supplémentaire et contextuel aux scènes (comme le déroulé d'un combat)
 export function updateStoryText(newText) {
   const textElement = document.getElementById("text");
   textElement.innerHTML += `<p>${newText}</p>`;
 }
 
-// --- Fonction qui affiche la scène : met à jour l'html avec le texte de la scène en cours, vide les anciens boutons, parcours les choix de currentScene pour créer un btn par choix, appelle la fonction makeAChoice quand on clique sur un bouton
+// -------------- Fonction qui affiche la scène : met à jour l'html avec le texte de la scène en cours, vide les anciens boutons, parcours les choix de currentScene pour créer un btn par choix, appelle la fonction makeAChoice quand on clique sur un bouton
 export function displayScene() {
   const textElement = document.getElementById("text");
   const choiceContainer = document.getElementById("choice");
@@ -46,7 +46,7 @@ export function displayScene() {
   });
 }
 
-// --- Fonction qui gère les choix : récupère le choix sélectionné, vérifie s'il y a un effet et l'applique (ajout/retrait objet inventaire, up/down d'une stat, etc), met à jour currentScene pour passer à la prochaine scène défini dans la nextScene associée au choix et fini en appellant la fonction displayScene()
+// -------------- Fonction qui gère les choix : récupère le choix sélectionné, vérifie s'il y a un effet et l'applique (ajout/retrait objet inventaire, up/down d'une stat, etc), met à jour currentScene pour passer à la prochaine scène défini dans la nextScene associée au choix et fini en appellant la fonction displayScene()
 export function makeAChoice(index) {
   const choice = getCurrentScene().choices[index];
 

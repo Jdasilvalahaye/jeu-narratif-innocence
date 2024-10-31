@@ -11,12 +11,12 @@ export function initiateBattle(enemy, nextScene) {
   displayBattleInterface();
 }
 
-// --- Fonction pour lancer un dé à 12 faces
+// -------------- Fonction pour lancer un dé à 12 faces
 function rollDice() {
   return Math.floor(Math.random() * 12) + 1; // Retourne un nombre entre 1 et 12
 }
 
-// --- Fonction d'affichage de l'interface de combat
+// -------------- Fonction d'affichage de l'interface de combat
 export function displayBattleInterface() {
   const textElement = document.getElementById("text");
   const choiceContainer = document.getElementById("choice");
@@ -34,7 +34,7 @@ export function displayBattleInterface() {
   `;
 }
 
-// --- Fonction pour gérer le tour de combat du joueur
+// -------------- Fonction pour gérer le tour de combat du joueur
 export function rollDiceForBattle() {
   const roll = rollDice();
   const { damage, message } = calculatePlayerDamage(roll, currentEnemy);
@@ -59,14 +59,14 @@ export function rollDiceForBattle() {
   executeEnemyTurn();
 }
 
-// --- Fonction pour calculer la chance de bloquer l'attaque de l'ennemi
+// -------------- Fonction pour calculer la chance de bloquer l'attaque de l'ennemi
 function calculateBlockChance() {
   const blockChance = player.block; // Le pourcentage de chance de blocage
   const roll = Math.random() * 100; // Génère un nombre entre 0 et 99.99
   return roll < blockChance; // Si le roll est inférieur à la chance de blocage, l'attaque est bloquée
 }
 
-// --- Fonction qui gère le tour de l'ennemi
+// -------------- Fonction qui gère le tour de l'ennemi
 function executeEnemyTurn() {
   // Vérifie si l'attaque de l'ennemi est bloquée
   if (calculateBlockChance()) {
@@ -95,7 +95,7 @@ function executeEnemyTurn() {
   }
 }
 
-// --- Calcul des dégâts du joueur
+// -------------- Fonction Calcul des dégâts du joueur
 function calculatePlayerDamage(roll, enemy) {
   let baseStat =
     player.classType === "warrior"
@@ -136,7 +136,7 @@ function calculatePlayerDamage(roll, enemy) {
   return { damage, message };
 }
 
-// --- Calcul des dégâts de l'ennemi
+// -------------- Fonction Calcul des dégâts de l'ennemi
 function calculateEnemyDamage(enemy) {
   if (enemy.strength && !enemy.intelligence) {
     return Math.max(enemy.strength - player.physicalDefense, 0);
@@ -146,7 +146,7 @@ function calculateEnemyDamage(enemy) {
   return 0;
 }
 
-// --- Fin du combat
+// -------------- Fonction Fin du combat
 export function endBattle(playerDefeated = false) {
   inBattle = false;
 

@@ -11,7 +11,7 @@ export const player = {
   inventory: [],
 };
 
-// --- Fonction pour mettre à jour les statistiques
+// -------------- Fonction pour mettre à jour les statistiques
 export function displayStats() {
   document.getElementById("class").textContent = player.class;
   document.getElementById("hp").textContent = player.hp;
@@ -24,7 +24,7 @@ export function displayStats() {
   document.getElementById("mdef").textContent = player.magicalDefense;
 }
 
-// --- Fonction pour afficher et remplir l'inventaire
+// -------------- Fonction pour afficher et remplir l'inventaire
 export function displayInventory() {
   const inventoryElement = document.getElementById("inventory");
   inventoryElement.innerHTML = ""; // Vider l'inventaire actuel
