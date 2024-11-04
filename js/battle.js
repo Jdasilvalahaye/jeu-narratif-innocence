@@ -43,7 +43,7 @@ export function displayBattleInterface() {
 // -------------- Fonction Calcul des dégâts du joueur
 function calculatePlayerDamage(roll, enemy) {
   let baseStat =
-    player.class === "Guerrier" ? player.strength : player.class === "Rodeur" ? player.dexterity : player.intelligence;
+    player.class === "Guerrier" ? player.strenght : player.class === "Rodeur" ? player.dexterity : player.intelligence;
   let damageMultiplier;
   let message;
 
